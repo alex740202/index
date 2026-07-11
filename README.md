@@ -8,6 +8,11 @@
 
  ----
 
+____
+
+
+*****
+
 ### Задание 2
 
 Выполните explain analyze следующего запроса:
@@ -28,8 +33,6 @@ where date(p.payment_date) = '2005-07-30' and p.payment_date = r.rental_date and
 4. SUM(...) OVER(...) вычисляется для каждой строки, что создает огромные временные таблицы.
 
 ```sql
-USE sakila;
-
 SELECT 
     CONCAT(c.last_name, ' ', c.first_name) AS customer_name,
     SUM(p.amount) AS total_amount
